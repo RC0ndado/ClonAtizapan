@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Iniciar Sesión </title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#37e844">
+    <link rel="preload" href="public/css/normalize.css" as="style">
+    <link rel="stylesheet" href="public/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/jpg" href="img/LogoTiz.jpeg">
+
+    <!-- Importando íconos -->
+    <script src="https://kit.fontawesome.com/56dd043464.js" crossorigin="anonymous"></script>
+    
+    <!-- Importamos un tipo de fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/styles.css" as="style">
+    <link href="css/login.css" rel="stylesheet" type="text/css">
+    <link href="css/normalize.css">
+</head>
+
+<body id="log">
+
+    <form class="f" action="/login" method="post"> <!--Formulario-->
+        <h1 class="ft"> TizAlerta ! </h1>
+        <h2 class="ft"> Iniciar Sesión</h2> <!-- Título -->
+
+        
+        <section class="fc"> <!-- Container -->
+            <!-------------------------------------------------------- Usuario --->
+            <div class="fg">
+                <input type="text" id="user" class="fi" placeholder=" " name="user"required>
+                <label for="name" class="flabel"> Usuario: </label>
+                <span class="fl"></span>
+            </div>
+            <!-------------------------------------------------------------------->
+            <!-------------------------------------------------------- Password -->
+            <div class="fg">
+                <input type="password" id="password" class="fi" placeholder=" " name = "password" required>
+                <label for="name" class="flabel"> Contraseña: </label>
+                <span class="fl"></span>
+            </div>
+            <!------------------------------------------------------------------->
+
+            <button type="submit"> Entrar</button>
+
+            <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+            <if(typeof alert != "undefined"){ >
+                <script>
+                    Swal.fire({
+                        title: '<%= alertTitle %>',
+                        text: '<%= alertMessage %>',
+                        icon: '<%= alertIcon %>',
+                        showConfirmButton: <%= showConfirmButton %> ,
+                        timer: <%= timer %>
+                        }).then(()=>{
+                            window.location='/<%= ruta %>'
+                        })
+                </script>
+
+
+        </section>
+    </form>
+    
+</body>
+</html>
