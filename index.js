@@ -1,7 +1,11 @@
 // cSpell:disable
 
 // Rutas absolutas
+const http = require('http');
 const path = require('path');
+const helmet = require('helmet');
+var compression = require('compression');
+require('dotenv').config();
 
 
 const express = require('express');
@@ -13,6 +17,13 @@ const cookieParser = require('cookie-parser');
 
 // create server
 const app = express();
+
+app.use(helmet());
+app.use(compression());
+
+const serverHttp = http.createServer(app);
+serverHttp.listen(process.env.HTTP_PORT, process.env.IP);
+console.log(process.env.HTTP_PORT)
 
 global.config = require('./config')
 
