@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TizAlerta App Report</title>
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="preload" href="public/css/normalize.css" as="style">
+    <link rel="stylesheet" href="public/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/jpg" href="img/Logo.jpeg">
+    
+    <!-- Importando íconos -->
+    <script src="https://kit.fontawesome.com/56dd043464.js" crossorigin="anonymous"></script>
+    
+    <!-- Importamos un tipo de fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap" rel="stylesheet">
+    <!--<link rel="preload" href="css/styles.css" as="style"> -->
+    <link rel="preload" href="css/forms.css" as="style">
+    <link href="css/forms.css" rel="stylesheet" type="text/css">
+    <!--<link href="css/styles.css" rel="stylesheet" type="text/css">-->
+    <link href="css/normalize.css">
+
+</head>
+<body>
+    <div class="hero-evolution">
+        <form>
+    <!---------------------------------------------------- Nombre de notificación-->        
+            <div class="inGrup">
+                <input type="text" id="Nombre" required>
+                <label for="">Título de Notificación: </label>
+            </div>
+    <!-------------------------------------------------------------------------------->
+    
+    <!---------------------------------------------------- Tipo de notificación-->
+            <div class="inGrup">
+                <input type="text" id="_suceso" required>
+                <label for="">Tipo de Notificación: </label>
+                <div class="custom-select">
+                    <select>
+                        <option value="select">-</option>
+                        <option value="terremoto">Terremoto</option>
+                        <option value="inundacion">Inundación</option>
+                        <option value="incendio">Incendio</option>
+                        <option value="choque">choque</option>
+                    </select>
+                </div>
+            </div>
+    <!-------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------ Id de notificación-->
+            <div class="inGrup">
+                <input type="text" id="Id_suceso" required>
+                <label for="">Título de Notificación: </label>
+            </div>
+    
+    <!---------------------------------------------------- Descripción-->
+            <div class="inGrup">
+                <textarea id="Descripcion" rows="8" required>
+                <label for="descripcion"> Descripcion: </label>
+            </div>
+    <!-------------------------------------------------------------------------------->
+            <button type="submit">Enviar</button>
+    
+        </form>
+
+    </div>
+    
+</body>
+</html>
