@@ -64,10 +64,6 @@ app.set('view engine', 'ejs', 'global.config.site.html.engine');
 
 // Rutas asignadas
 
-app.get('*',(req, res)=>{
-    res.status(404).send('Error bro')
-});
-
 app.get('/main',(req, res)=>{
     res.sendFile(path.join(__dirname, 'views', 'prueba.html'));
 });
@@ -78,6 +74,10 @@ app.get('/login', (req, res) => {
 
 app.get('/reportes', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'report.html'));
+});
+
+app.get('*',(req, res)=>{
+    res.status(404).send('Error bro')
 });
 
 console.log(path.join(__dirname, 'views', 'prueba.html'));
