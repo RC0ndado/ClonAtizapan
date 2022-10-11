@@ -27,6 +27,10 @@ console.log(process.env.HTTP_PORT)
 
 global.config = require('./config')
 
+// static contai
+app.use(express.static('./public'));
+app.use(express.static('./views'));
+
 
 app.locals = global.config;
 
