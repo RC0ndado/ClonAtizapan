@@ -64,7 +64,7 @@ app.get('*',(req, res)=>{
     res.status(404).send('Error bro')
 });
 
-app.get('./main',(req, res)=>{
+app.get('/main',(req, res)=>{
     res.sendFile(path.join(__dirname, 'views', 'prueba.html'));
 });
 
