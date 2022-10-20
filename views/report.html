@@ -51,11 +51,7 @@
                         (place.address_components[2] && place.address_components[2].short_name || '')
                     ].join(' ');
                 }
-                /*********************************************************************/
-                /* var address contain your autocomplete address *********************/
-                /* place.geometry.location.lat() && place.geometry.location.lat() ****/
-                /* will be used for current address latitude and longitude************/
-                /*********************************************************************/
+
                 document.getElementById('lat').innerHTML = place.geometry.location.lat();
                 document.getElementById('long').innerHTML = place.geometry.location.lng();
             });
