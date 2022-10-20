@@ -16,7 +16,11 @@
     
     <!-- Importamos un tipo de fuente -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap" rel="stylesheet">
-    <link rel="preload" href="css/styles.css" as="style">
+    <!--
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    -->
+        <link rel="preload" href="css/styles.css" as="style">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <link href="css/normalize.css">
 </head>
@@ -37,10 +41,11 @@
 <!------------------------------------------------------------ Descargar la Aplicación ---------------------------------->
 <section class="hero">
     <div class="contenido-hero">
-        <h2> Descarga la Aplicación: <span> TizAlerta </span> </h2>
+        <h2> Proyecto: <span> TizAlerta </span> </h2>
         <div class="ubicacion"></div>
         <p>
             <!------------------------------------------------------------------------------------------ Ícono de Android -->
+            <!--
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="44" height="44"
             viewBox="0 0 24 24" stroke-width="1.5" stroke="#7bc62d" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -48,14 +53,18 @@
                 <polyline points="7 11 12 16 17 11" />
                 <line x1="12" y1="4" x2="12" y2="16" />
             </svg>
+            -->
             <!------------------------------------------------------------------------------------------------------------->
         
             Atizapán de Zaragoza, Estado de México
         </p>
+        <!--
         <a class="boton" href="#"> Descargar </a>
+        -->
     </div>
 </section>
 <!-------------------------------------------------------------------------------------------------- APLICACIÓN ---> 
+
 
 <main>
     <!-- Serían las tarjetas o texto o autores -->
@@ -80,80 +89,104 @@
     -->
     <!------------------------------------------------------------------------------------------ Prueba 1-->
 
-
-    <section class="cempo">
-        <div class="grid">
-
-        <div class="grid-item">
+        <section class="cempo-container">
             <div class="card">
-                <img class="cImage" src="img/TizAlerta.jpeg" alt="Logo de la Capi">
-                <div class="cContent">
-                    <h1 class="c-head"> Hello </h1>
-                    <p class="cText">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                        Eum deserunt aliquid reiciendis ducimus. Quos illum odio dolores.
-                        Similique rerum natus ratione quasi provident. Quasi sit, 
-                        expedita magni assumenda tempore officiis.
+                <div class="card-image">
+                    <br>
+                    
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    
+                 
+                    <h2> ¿Eres trabajador gubernamental? </h2>
+                    <p>
+                        Ingresa aquí para iniciar sesión.
                     </p>
-                    <button class="card-btn">
-                        Visit <span>&rarr;</span>
-                    </button>
+                    <a href="./login">Ingresar </a>
+            </div>
+        </section>
+
+
+<!-------------------------------------------------------------------------------Equipo desarrollador-->
+<span class="mueve"> Desarrolladores: </span>
+
+
+    <section class="main">
+        <div class="profile-card">
+            <div class="imagen">
+                <img src="img/Danae.jpeg" height="160" width="300">
+            </div>
+            <div class="captation">
+                <h3> Paola Danae López Pérez </h3>
+                <p> Project Manager </p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=100004339770922"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/danalop_18/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/PaoDanalop"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
         </div>
-            
-        <div class="grid-item">
-            <div class="card">
-                <img class="cImage" src="img/TizAlerta.jpeg" alt="Logo de la Capi">
-                <div class="cContent">
-                    <h1 class="c-head"> Hello </h1>
-                        <p class="cText">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Eum deserunt aliquid reiciendis ducimus. Quos illum odio dolores.
-                            Similique rerum natus ratione quasi provident. Quasi sit,
-                            expedita magni assumenda tempore officiis.
-                        </p>
-                    <button class="card-btn">
-                        Visit <span>&rarr;</span>
-                    </button>
+        <div class="profile-card">
+            <div class="imagen">
+                <img src="img/Pau.jpeg">
+            </div>
+            <div class="captation">
+                <h3> Paula Santoyo Arteaga </h3>
+                <p> Backend Developer </p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/paulasophia.santoyo"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/pau_sophi/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/Pau_Sophi"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
         </div>
-
-        <div class="grid-item">
-            <div class="card">
-                <img class="cImage" src="img/TizAlerta.jpeg" alt="Logo de la Capi">
-                <div class="cContent">
-                    <h1 class="c-head"> Hello </h1>
-                    <p class="cText">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Eum deserunt aliquid reiciendis ducimus. Quos illum odio dolores.
-                        Similique rerum natus ratione quasi provident. Quasi sit,
-                        expedita magni assumenda tempore officiis.
-                    </p>
-                    <button class="card-btn">
-                        Visit <span>&rarr;</span>
-                    </button>
+        <div class="profile-card">
+            <div class="imagen">
+                <img src="img/Piko.jpeg" height="160" width="300">
+            </div>
+            <div class="captation">
+                <h3> Diego Balderas </h3>
+                <p> Android Developer </p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/diegoalejandro.balderas"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/diegobt1912/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/Dabalderast"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
         </div>
-
-
+        <div class="profile-card">
+            <div class="imagen">
+                <img src="img/Rick.jpg">
+            </div>
+            <div class="captation">
+                <h3> Ricardo Condado </h3>
+                <p> Frontend Developer </p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/ricardo.ramirezcondado/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/rc_condado/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/ReyCondado17"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
         </div>
-        
-    </section>
-
-
-
-    <section>
-        <h2> Acerca de nuestra aplicación </h2>
-        <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Cupiditate, officiis ipsam nostrum necessitatibus delectus
-            harum enim dicta vitae natus libero earum sequi praesentium
-            incidunt officia accusamus. Eaque tenetur eum aliquid?
-        </p>
-    
+        <div class="profile-card">
+            <div class="imagen">
+                <img src="img/Nadia.jpg">
+            </div>
+            <div class="captation">
+                <h3> Nadia Paola Gallegos </h3>
+                <p> Android Developer </p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/nadia.paola.319"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/nad14517/?hl=es"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/Nadia14517"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
     </section>
 
 </main>
@@ -164,29 +197,43 @@
         <div class="box">
             <figure>
                 <a href="#">
-                    <img src="img/TizAlerta.jpeg" alt="Logo">
+                    <img src="img/OpcionB.PNG" alt="Logo">
                 </a>
             </figure>
         </div>
         <div class="box">
-            <h2>SOBRE NOSOTROS</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, consequuntur asperiores aliquam dignissimos amet cumque eaque officia rem vel totam perspiciatis molestiae iste, odio repellat beatae architecto corporis ipsum velit!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate fugit quasi repudiandae veniam possimus tempora excepturi dolore qui. Consectetur ea obcaecati cumque maxime rerum quae eveniet, odit porro magnam perferendis?</p>
+            <h2>SOBRE TIZALERTA</h2>
+            <br>
+            <p>TizAlerta es una aplicación para android de uso público 
+            que ayuda a la comunidad civil de Atizapán de Zaragoza. </p>
+            <p>
+            El tipo de ayuda se enfoca, principalmente, en notificar a 
+            los ciudadanos sobre los peligros y/o desastres que suceden 
+            en ciertas localizaciones del municipio (desde alertas de 
+            sismos, inundaciones, incendios, entre otras más).</p>
+        
         </div>
         <div class="box">
+            <p>
+                El sistema funciona a partir de un sitio web, en el cual
+                sólamente miembros autorizados tendrán acceso a ella. Dicho
+                sitio se encargará de enviar notificaciones de alerta a los 
+                usuarios que cuenten con la aplicación instalada en sus
+                dispositivos móviles (celulares).
+                <br>
+            </p>
             <h2>SIGUENOS</h2>
             <div class="red-social">
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-instagram"></a>
-                <a href="#" class="fa fa-youtube"></a>
-                <a href="#" class="fa fa-twitter"></a>
+                <a href="https://www.facebook.com/GobAtizapan" class="fa fa-facebook"></a>
+                <a href="https://www.instagram.com/gobatizapan/" class="fa fa-instagram"></a>
+                <a href="https://www.youtube.com/user/AtizapanTV" class="fa fa-youtube"></a>
+                <a href="https://twitter.com/GobAtizapan" class="fa fa-twitter"></a>
             </div>
-            <h3> Hello world</h3>
+            
         </div>
     </div>
     <div class="g2">
         <small>&copy; 2022 <b>TizAlerta</b> - Todos los Derechos Reservados.</small>
-
     </div>
 
 </footer>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,50 +24,118 @@
     <!--<link href="css/styles.css" rel="stylesheet" type="text/css">-->
     <link href="css/normalize.css">
 
+    <!--------------------------------------------------- Coordenadas y Autocomplete -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?v=weekly.exp&libraries=places&key=AIzaSyBFNG3L5-uUEBJYoIZmLh4_U730a0wB7R8">
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+
+        function initialize() {
+            var address = (document.getElementById('pac-input'));
+            var autocomplete = new google.maps.places.Autocomplete(address);
+            autocomplete.setTypes(['geocode']);
+            google.maps.event.addListener(autocomplete, 'place_changed', function () {
+                var place = autocomplete.getPlace();
+                jQuery("#lat").val(place.geometry.location.lat())
+                jQuery("#long").val(place.geometry.location.lng())
+                if (!place.geometry) {
+                    return;
+                }
+
+                var address = '';
+                if (place.address_components) {
+                    address = [
+                        (place.address_components[0] && place.address_components[0].short_name || ''),
+                        (place.address_components[1] && place.address_components[1].short_name || ''),
+                        (place.address_components[2] && place.address_components[2].short_name || '')
+                    ].join(' ');
+                }
+                /*********************************************************************/
+                /* var address contain your autocomplete address *********************/
+                /* place.geometry.location.lat() && place.geometry.location.lat() ****/
+                /* will be used for current address latitude and longitude************/
+                /*********************************************************************/
+                document.getElementById('lat').innerHTML = place.geometry.location.lat();
+                document.getElementById('long').innerHTML = place.geometry.location.lng();
+            });
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+    <!-------------------------------------------------------------------------------------------------------------->
 </head>
+
 <body>
     <div class="hero-evolution">
-        <form>
-    <!---------------------------------------------------- Nombre de notificación-->        
-            <div class="inGrup">
-                <input type="text" id="Nombre" required>
-                <label for="">Título de Notificación: </label>
-            </div>
-    <!-------------------------------------------------------------------------------->
-    
-    <!---------------------------------------------------- Tipo de notificación-->
-            <div class="inGrup">
-                <input type="text" id="_suceso" required>
-                <label for="">Tipo de Notificación: </label>
-                <div class="custom-select">
-                    <select>
-                        <option value="select">-</option>
-                        <option value="terremoto">Terremoto</option>
-                        <option value="inundacion">Inundación</option>
-                        <option value="incendio">Incendio</option>
-                        <option value="choque">choque</option>
-                    </select>
+        <h1 class="titulo"> Registro de Alerta </h1>
+        <form action="/reportes" method="post"> <!-------------------------------->
+            <div class="main-user">
+                <div class="user-box">
+                    <label for="nameUsuario">Título: </label>
+                    <input type="text" class="form-control" id="notificacion" name="notificacion" placeholder="notificación" required> <!-- NO MOVER NADA -->
                 </div>
-            </div>
-    <!-------------------------------------------------------------------------------->
+                
+                <div class="user-box">
+                    <label for="userUsuario">Descripción: </label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="descripcion" required> <!-- NO MOVER NADA -->
+                </div>
 
-    <!------------------------------------------------------ Id de notificación-->
-            <div class="inGrup">
-                <input type="text" id="Id_suceso" required>
-                <label for="">Título de Notificación: </label>
-            </div>
-    
-    <!---------------------------------------------------- Descripción-->
-            <div class="inGrup">
-                <textarea id="Descripcion" rows="8" required>
-                <label for="descripcion"> Descripcion: </label>
-            </div>
-    <!-------------------------------------------------------------------------------->
-            <button type="submit">Enviar</button>
-    
+                
+                <div class="user-box-g select">
+                    <span class="gT"> Tipo: </span>
+                    <!-------------------------------NO MOVER----------------------------------->
+                    <select class = "dropdown" id="tipo" name="tipo" placeholder="Tipo de desastre" required>
+                        <option value="" disabled selected> Tipo de desastre </option>
+                        <option value="sismo">Sismo</option>
+                        <option value="inundacion">Inundación</option>
+                        <option value="clima">Clima</option>
+                    </select>
+                    <!-------------------------------NO MOVER----------------------------------->
+                </div>
+
+                <!--
+                <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed in=true&libreries=places"></script>
+                -->
+                <script>
+                    document.lat.innerHTML = place.geometry.location.lat();
+                    document.long.innerHTML = place.geometry.location.lng(); 
+                    
+                </script>
+
+                <div class="user-box">
+                    <label for="userUsuario">Localización: </label>
+                    <input id="pac-input" class="controls form-control" type="text" placeholder="Enter a location">
+                </div>
+
+                <div class="user-box">
+                    <input id="lat" name="lat">
+
+                    <input id="long" name="long">
+                </div>
+
+
+                <!-- Botón -------------------------------------------------->
+                <div class="button-edition">
+                    <button type="submit">Enviar</button>
+                        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                    
+                            <if(typeof alert != "undefined"){ >
+                                <script>
+                                    Swal.fire({
+                                        title: '<%= alertTitle %>',
+                                        text: '<%= alertMessage %>',
+                                        icon: '<%= alertIcon %>',
+                                        showConfirmButton: <%= showConfirmButton %> ,
+                                        timer: <%= timer %>
+                                        }).then(()=>{
+                                            window.location='/<%= ruta %>'
+                                        })
+                                </script>
+                </div>
+            </div>        
         </form>
-
     </div>
-    
 </body>
 </html>
