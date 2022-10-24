@@ -51,7 +51,6 @@
                         (place.address_components[2] && place.address_components[2].short_name || '')
                     ].join(' ');
                 }
-
                 document.getElementById('lat').innerHTML = place.geometry.location.lat();
                 document.getElementById('long').innerHTML = place.geometry.location.lng();
             });
@@ -81,14 +80,14 @@
                 
                 <div class="user-box-g select">
                     <span class="gT"> Tipo: </span>
-                    <!-------------------------------NO MOVER----------------------------------->
+                    <!-------------------------------Sección de tipo ID----------------------------------->
                     <select class = "dropdown" id="tipo" name="tipo" placeholder="Tipo de desastre" required>
                         <option value="" disabled selected> Tipo de desastre </option>
                         <option value="sismo">Sismo</option>
                         <option value="inundacion">Inundación</option>
                         <option value="clima">Clima</option>
                     </select>
-                    <!-------------------------------NO MOVER----------------------------------->
+                    <!------------------------------------------------------------------>
                 </div>
 
                 <!--
